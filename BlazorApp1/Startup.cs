@@ -45,7 +45,6 @@ namespace BlazorApp1
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
