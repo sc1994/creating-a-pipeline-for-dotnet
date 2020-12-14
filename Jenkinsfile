@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('error') {
+    stage('Build') {
       steps {
-        sh 'dotnet run'
+        sh 'dotnet restore'
       }
     }
 
