@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh 'dotnet build'
+        sh 'dotnet run'
       }
     }
 
