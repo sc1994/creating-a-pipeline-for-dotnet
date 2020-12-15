@@ -16,6 +16,7 @@ pipeline {
     stage('Run') {
       steps {
         sh 'dotnet run --project BlazorApp1'
+        input 'Finished using the web site? (Click "Proceed" to continue)'
       }
     }
 
