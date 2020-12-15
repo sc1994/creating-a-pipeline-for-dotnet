@@ -20,6 +20,7 @@ pipeline {
 cd publish
 
 dotnet BlazorApp1.dll &'''
+        input 'Waiting foFinished using the web site? (Click "Proceed" to continue)'
       }
     }
 
