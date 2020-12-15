@@ -15,7 +15,11 @@ pipeline {
 
     stage('Run') {
       steps {
-        sh 'dotnet run --project BlazorApp1'
+        sh '''dotnet publish -c Release -o publish
+
+cd publish
+
+dotnet BlazorApp1.dll'''
         input 'Finished using the web site? (Click "Proceed" to continue)'
       }
     }
