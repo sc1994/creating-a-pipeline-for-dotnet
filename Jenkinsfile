@@ -26,10 +26,7 @@ pipeline {
 ls        
 dotnet BlazorApp1.dll & '''
         input '点击确认按钮继续'
-        sh '''set -x
-kill $(cat .pidfile)'''
       }
     }
-
   }
 }
