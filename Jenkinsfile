@@ -16,16 +16,16 @@ pipeline {
     stage('Publish') {
       steps {
         sh 'dotnet publish -c Release -o publish'
-      }
-
-      steps {
         sh 'cd publish'
       }
     }
     
-    stage('Run') {
+    stage('Deliver') {
       steps {
         sh 'dotnet BlazorApp1.dll &'
+        input '点击确认按钮继续'
+        sh '''set -x
+kill $(cat .pidfile)'''
       }
     }
 
