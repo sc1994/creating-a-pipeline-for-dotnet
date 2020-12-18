@@ -24,7 +24,7 @@ pipeline {
       steps {
         sh '''cd publish
 ls        
-dotnet BlazorApp1.dll & '''
+nohup dotnet BlazorApp1.dll > /dev/null 2>&1 &'''
         input '点击确认按钮继续'
       }
     }
