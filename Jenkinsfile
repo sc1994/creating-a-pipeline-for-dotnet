@@ -16,7 +16,9 @@ pipeline {
     stage('Publish') {
       steps {
         sh 'dotnet publish -c Release -o publish'
+        sh 'ls'
         sh 'cd publish'
+        sh 'ls'
       }
     }
     
