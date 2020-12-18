@@ -23,7 +23,7 @@ pipeline {
     stage('Deliver') {
       steps {
         sh '''cd publish
-        
+ls        
 dotnet BlazorApp1.dll &'''
         input '点击确认按钮继续'
         sh '''set -x
