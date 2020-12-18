@@ -13,13 +13,17 @@ pipeline {
       }
     }
 
-    stage('Run') {
+    stage('Publish') {
       steps {
         sh '''dotnet publish -c Release -o publish
 
-cd publish
-
-dotnet BlazorApp1.dll &'''
+cd publish'''
+      }
+    }
+    
+    stage('Run') {
+      steps {
+        sh 'dotnet BlazorApp1.dll &'
       }
     }
 
