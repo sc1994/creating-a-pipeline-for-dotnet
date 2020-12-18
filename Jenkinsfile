@@ -17,10 +17,6 @@ pipeline {
       steps {
         sh 'dotnet publish -c Release -o publish'
       }
-
-      steps {
-        sh 'cd publish'
-      }
     }
     
     stage('Run') {
